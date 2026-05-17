@@ -2492,13 +2492,11 @@
     <script>
         // URLs publicadas de cada pestaña
         // Para obtener estas URLs: Archivo -> Compartir -> Publicar en la web -> seleccionar pestaña -> CSV
-        // Proxy de Google Apps Script (mucho más confiable)
-        const PROXY_URL = 'https://script.google.com/macros/s/AKfycbw24elCtVN_t_DoKdXuBs6qurup4OvDqrGqmuZZao6swnQi_M0RE1RxNVYiK3h5XmZb/exec';
-        
-        const ETF_URL = `${PROXY_URL}?gid=244163280`;
-        const THEMES_URL = `${PROXY_URL}?gid=1159493515`;
-        const INDICES_URL = `${PROXY_URL}?gid=632459890`;
-        const SUBINDICES_URL = `${PROXY_URL}?gid=201851790`;
+        // URLs directas de Google Sheets (funcionan mejor con proxies CORS públicos)
+        const ETF_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQvdenfRCD6GOSuCIWM7hGsLKCSjPLlg1Iyh7FR8djhHGTcHFwljW29_mTpJHzJi5knpTSxZTXES9Ev/pub?gid=244163280&single=true&output=csv';
+        const THEMES_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQvdenfRCD6GOSuCIWM7hGsLKCSjPLlg1Iyh7FR8djhHGTcHFwljW29_mTpJHzJi5knpTSxZTXES9Ev/pub?gid=1159493515&single=true&output=csv';
+        const INDICES_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQvdenfRCD6GOSuCIWM7hGsLKCSjPLlg1Iyh7FR8djhHGTcHFwljW29_mTpJHzJi5knpTSxZTXES9Ev/pub?gid=632459890&single=true&output=csv';
+        const SUBINDICES_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQvdenfRCD6GOSuCIWM7hGsLKCSjPLlg1Iyh7FR8djhHGTcHFwljW29_mTpJHzJi5knpTSxZTXES9Ev/pub?gid=201851790&single=true&output=csv';
         
         let etfData = [];
         let themesData = [];
